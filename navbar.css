@@ -1,0 +1,39 @@
+*
+    {
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+    }
+.navbar-left , .navbar-right
+    {
+        width: 60px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        margin-right: 30px;  
+    }
+.navbar
+    {
+        text-transform: uppercase;
+        padding: 10px;
+        display: flex;
+        -webkit-box-shadow: 0px 10px 5px 0px rgba(69,55,69,1);
+        -moz-box-shadow: 0px 10px 5px 0px rgba(69,55,69,1);
+        box-shadow: 0px 10px 5px 0px rgb(76, 62, 76);
+    }
+
+
+.navbar-left div 
+    {
+        padding: 20px;
+    }
+
+.find-store
+    {
+        display: flex;
+        align-items: center;
+        float: right;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+
