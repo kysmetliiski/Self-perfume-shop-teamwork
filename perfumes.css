@@ -1,4 +1,7 @@
-
+body
+    {
+        background-color: rgba(249, 241, 230, 0.855);
+    }
     h1{
         font-size: 20px;
         float:right;
@@ -11,6 +14,19 @@
         padding-top: 175px;
         padding-left: 40px;
     }
+    
     .price {
         float: right;
     }
+    .buy
+    { 
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+    .buynow
+        {
+            padding-right: 220px;
+            float: inline-end;
+            
+        }
