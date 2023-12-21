@@ -1,6 +1,6 @@
 <?php 
 
-class registration extends Controller
+class Registration extends Controller
 {
 	function __construct()
     {
