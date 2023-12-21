@@ -1,0 +1,16 @@
+
+    h1{
+        font-size: 20px;
+        float:right;
+        padding-top: 140px;
+        padding-right: 240px;
+    }
+
+    h2{
+        float: right;
+        padding-top: 175px;
+        padding-left: 40px;
+    }
+    .price {
+        float: right;
+    }
