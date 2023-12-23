@@ -5,23 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+         form{
+            padding-top: 50px;
+        }
+        
+            .containerr {
+      width: 380px;
+      height: 500px;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding-top: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-control
+    {
+        width: 40%;
+    }
+    </style>
 </head>
 <body>
     <?php 
     include("navbar.html");
-    echo $error
+    echo $err
     ?>
+    
+    <div class="move" style="padding-left: 650px; padding-top: 90px;">
+        <div class="containerr">
     <form method="post" class="form">
-        <label>Име:</label><br>
-        <input type="text" name="name" class='form-control'><br>
-        <label>Фамилия:</label><br>
-        <input type="text" name="lname"  class='form-control'><br>
         <label>E-mail:</label><br>
         <input type="text" name="email"  class='form-control'><br>
         <label>Парола</label><br>
         <input type="password" name="password"  class='form-control'><br><br>
-        <input type="submit" name="submit" value="Изпрати" class='btn btn-info w-100'>
+        <input type="submit" name="submit" value="Изпрати" class='btn btn-secondary w-100'>
 </form>
+</div>
+</div>
+
+
+<?php
+include("footer.html"); 
+?>
 
 </body>
 </html>

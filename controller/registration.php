@@ -10,6 +10,7 @@ class Registration extends Controller
     public function index()
     {
 		$err = "";
+		
 		$servername = "127.0.0.1";
 		$username = "root";
 		$password = "veselin7";
