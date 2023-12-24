@@ -17,6 +17,7 @@ body
     
     .price {
         float: right;
+        padding-top: 400px;
     }
     .buy
     { 
@@ -35,3 +36,9 @@ body
     padding-left:230px; 
     padding-top: 160px;
    }
+   .container
+    {
+        padding: 1920px;
+    }
+
+   
