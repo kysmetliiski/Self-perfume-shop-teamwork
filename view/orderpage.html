@@ -5,53 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>order</title>
-    <style>
-        .order
-            {
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-              border: 1px black solid;
-              padding-top: 200px; 
-              padding-left: 130px;  
-              max-width: 400px;
-              max-height: 900px;
-            }  
-
-         .order h2 
-            {
-                white-space: nowrap;
-
-            }   
-            .left
-            {
-             padding-top: 200px;
-             padding-left: 150px;
-            }
-
-            .adress
-            {
-                padding-left: 140px;
-                float: right;
-            }
-    </style>
+    <link rel="stylesheet" type="text/css" href="orderpage.css">
 </head>
 <body>
     <?php 
     include("navbar.html");
     ?>
+
+</div>
 <div class="left">
+    <div class="fragrance"><h1>Name of product</h1>
+    </div>
     <div class="order">
+       <div class="photo"> 
+            <img src="photos/jean-paul.jpg" style="max-width: 400px; padding-left: 4%; padding-right: 200px;">
+        </div>
         <h2>Order Now!</h2><br>
     </div>
 </div>
 
-<div class="adress">
-    <input type="text" class="adresz"> adress</input><br>
-    <button type="submit">potvurdi</button>
+<div class="address">
+    <input type="text" class="name">Име</input><br>
+    <input type="text" class="last_name">Фамилия</input><br>
+    <input type="text" class="adresz"> Адрес</input><br>
+    <button type="submit">Поръчай</button>
 </div>
-
-
-
-
 <?php 
  include("footer.html");
 ?>
