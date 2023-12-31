@@ -1,0 +1,24 @@
+.container
+    {
+       
+        border: 1px solid black;
+    }
+
+    .column {
+        float: left;
+        width: 25%;
+        padding-top: 60px;
+        border: 1px solid black;
+      }
+      
+      .row:after {
+        display: table;
+        clear: both;
+
+      }
+
+      .row
+        {
+            padding-top: 200px;
+            padding-left: 400px;
+        }

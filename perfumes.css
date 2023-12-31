@@ -1,41 +1,58 @@
+.title  
+    {
+        padding-top: 70px;
+        padding-right: 60px;
+        flex-direction: column;
+        display: flex;
+        align-items: flex-end;
+    }
+
+.title h1 
+    {
+        padding-bottom: 5px;
+    }
+.title h2
+    {
+        font-size: 13px;
+        padding-right: 208px;
+    }
+.price
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 80px;
+    }
+.prais
+    {
+        padding-top: 40px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+        font-size: 18px;
+    }
+.buy
+    {
+        border-radius: 13px;
+        border: none;
+        color: black;
+        font-size: 18px;
+        text-transform: capitalize;
+        padding: 15px 32px;
+    }
+
 body
     {
-        background-color: rgba(249, 241, 230, 0.855);
-    }
-    h1{
-        font-size: 20px;
-        float:right;
-        padding-top: 140px;
-        padding-right: 240px;
+        display: flex;
+        flex-direction: column;
     }
 
-    h2{
-        float: right;
-        padding-top: 175px;
+.photo
+    {
+        width: 30%;
+        padding-left: 40px;
+
+    }
+.image  
+    {
         padding-left: 40px;
     }
-    
-    .price {
-        float: right;
-        padding-top: 400px;
-    }
-    .buy
-    { 
-        padding-top: 10px;
-        padding-bottom: 10px;
-
-    }
-    .buynow
-        {
-            padding-left: 620px;
-            float: inline-end; 
-            
-        }
-   .product-img {
-    width: 45%; 
-    padding-left:230px; 
-    padding-top: 160px;
-   }
- 
-
-   
