@@ -25,7 +25,6 @@
     }
 .prais
     {
-        padding-top: 40px;
         padding-right: 40px;
         padding-bottom: 30px;
         font-size: 18px;
@@ -48,11 +47,10 @@ body
 
 .photo
     {
-        width: 30%;
+        width: 780px;
         padding-left: 40px;
-
     }
 .image  
     {
-        padding-left: 40px;
+        padding-right: 650px;
     }

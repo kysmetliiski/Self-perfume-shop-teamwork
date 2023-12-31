@@ -31,7 +31,7 @@
 .find-store
     {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         float: right;
         border: 1px solid black;
         border-radius: 30px;
