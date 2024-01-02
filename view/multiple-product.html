@@ -5,20 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>multiple product view</title>
-    <link rel="stylesheet" type="text/css" href="multiple-product.css?v=2">
+    <link rel="stylesheet" type="text/css" href="multiple-product.css?v=4">
 </head>
+<style>
+    .row
+        {
+            text-transform: capitalize;
+        }
+   
+</style>
 <body>
     <?php 
     include("navbar.html");
     ?>
     
         <div class="row">
-            <div class="column">dsfd</div>
-            <div class="column">dsf</div>
-            <div class="column">d</div>
+
+            <div class="column">
+              <a href="index.php?controller=perfumes">
+                <img src="perfumes/jean-p.jpg" alt="">
+                <small><br>jean paul gaultier</small>
+                <p>Парфюмна вода за мъже 100ml</p>
+              </a>
+            </div>
+
+            <div class="column">
+                <img src="perfumes/armani-swy.jpg" alt="">
+                <small><br> armani stronger with you</small>
+                <p>Парфюмна вода за мъже 100ml</p>
+            </div>
+
+            <div class="column">
+                <img src="perfumes/black-xs.jpg" alt="">
+                <small  ><br>black xs by paco rabanne</small>
+                <p>Парфюмна вода за мъже 100ml</p>
+            </div>
+
+        
+           
           </div>
  
 
-  
+  <div class="footer">
+
+  </div>
 </body>
 </html>

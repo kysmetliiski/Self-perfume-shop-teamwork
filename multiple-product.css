@@ -9,12 +9,12 @@
         width: 25%;
         padding-top: 60px;
         border: 1px solid black;
+        padding-right: 20px;
       }
       
       .row:after {
         display: table;
         clear: both;
-
       }
 
       .row
@@ -22,3 +22,34 @@
             padding-top: 200px;
             padding-left: 400px;
         }
+        img
+          {
+            max-width: 200px;
+            padding-left: 50px;
+          }
+        small
+        {
+         
+          font-weight: 600;
+          font-size: 18px;
+          padding-bottom: 3px;
+          border-bottom: 1px solid black; 
+          transition: all 0.3s;
+        }
+        small:hover
+          {
+            background: rgb(3, 64, 71);
+            color: rgb(80, 201, 201);
+            
+          }
+        p
+          {
+            padding-left: 80px;
+          }
+        a
+          {
+            text-decoration: none;
+            color: blue;
+          }
+
+        
