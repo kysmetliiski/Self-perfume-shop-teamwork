@@ -32,6 +32,31 @@ class Registration extends Controller
 			$lname = $_POST['lname'];
 			$email = $_POST['email'];
 			$password = $_POST['password'];
+
+
+			if (empty($name)) {
+				echo "<b style='color:red;'>Внимание! Полето име е задължително!</br>";
+			}
+			
+			if (empty($lname)) {
+				echo "<b style='color:red;'>Внимание! Полето фамилия е задължително!</br>";
+			}
+			
+			if (empty($email)) {
+				echo "<b style='color:red;'>Внимание! Полето имейл е задължително!</br>";
+			} elseif (!preg_match('/@/', $email) || !preg_match('/[A-Za-z]/',$email)) {
+				echo "<b style='color:red;'>Имейлът задължително трябва да съдържа '@' и да бъде на латиница,за да бъде приет като валиден.</br> ";
+			}
+			
+			if (empty($password)) {
+				echo "<b style='color:red;'>Внимание! Полето парола е задължително!</br>";
+			} elseif (strlen($password)< 6 ) {
+				echo "<b style='color:red;'>Паролата трябва да бъде не по-малко от 6 символа</b>";
+			}
+				elseif (!preg_match('/[A-Za-z0-9А-Яа-я]/u', $password) || !preg_match('/[0-9]/', $password)) {
+					echo "<b style='color:red;'>Паролата трябва да бъде комбинация от букви и цифри.</b>";
+				}
+			
 			
 			
 			$error = false;
