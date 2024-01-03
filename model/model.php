@@ -46,7 +46,7 @@ class Model
     }
     function datasave($query,$params)
     {
-			return $this->$connection->prepare($query)->execute($params);
+			return $this->connection->prepare($query)->execute($params);
     }
 
 
