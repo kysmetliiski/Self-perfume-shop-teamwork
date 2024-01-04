@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Маркови и оригинални парфюми </title>
-    <link rel="stylesheet" type="text/css" href="perfumes.css?v=19">
+    <link rel="stylesheet" type="text/css" href="perfumes.css?v=22">
 </head>
 <body>
     <?php 
@@ -16,23 +16,26 @@
                         <h1><?= $product['name'] ?></h1>  
                         <h2>Парфюмна вода за мъже</h2>
     </div> 
+
+    <div class="imagee">
+        <?php 
+        
+                    if ($product['available'] <=2)
+                    {
+                        print("Ограничено количество.");
+                    }
+            if( $product['available'] == 0) {
+                print("Продуктът не е наличен.");
+            }
+        ?>
+                        <img src="<?= $product['product_image']?>"  class="photo" alt="po princip trqbva da se pokazva">
+                </div>
+
     <div class="price">
 
-        <div class="imagee">
-<?php 
+       
+        <div class="descp"><?= $product['description']?></div>
 
-            if ($product['available'] <=2)
-            {
-                print("Ограничено количество.");
-            }
-    if( $product['available'] == 0) {
-        print("Продуктът не е наличен.");
-    }
-?>
-                <img src="<?= $product['product_image']?>"  class="photo" alt="po princip trqbva da se pokazva">
-                <div class="descp" style="float: right; align-items:flex-end;"><?= $product['description']?></div>
-        </div>
-        
             <div class="prais"><?= $product['price']?>ЛВ</div>
     
         <a href="index.php?controller=orderpage">
