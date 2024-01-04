@@ -52,4 +52,7 @@
             color: black;
           }
 
-        
+        .column
+          {
+            max-height: 300px;
+          }

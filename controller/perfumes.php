@@ -9,9 +9,13 @@ class perfumes extends Controller
     }
     public function index()
     {
-        
+        $id = $_GET['id'];
 
-        $this->view->render("perfumes.html");
+        $product = $this->model->fetch("SELECT * FROM perfumes WHERE id = ?", array( $id ) );
+
+        $this->view->render("perfumes.html", array( 
+            'product' => $product, 
+        ) );
     }
 }
 

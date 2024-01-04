@@ -10,6 +10,7 @@
         flex-direction: column;
         display: flex;
         align-items: flex-end;
+        text-transform: capitalize;
     }
 
 .title h1 

@@ -5,25 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Маркови и оригинални парфюми </title>
-    <link rel="stylesheet" type="text/css" href="perfumes.css?v=18">
+    <link rel="stylesheet" type="text/css" href="perfumes.css?v=19">
 </head>
 <body>
     <?php 
-    include("navbar.html")
+    include("navbar.html");
     ?>
 
    <div class="title">
-                        <h1>Jean Paul Gaultier Scandal</h1>  
+                        <h1><?= $product['name'] ?></h1>  
                         <h2>Парфюмна вода за мъже</h2>
     </div> 
     <div class="price">
 
         <div class="imagee">
-                <img src="perfumes/jpg-horizontal.jpg"  class="photo" alt="po princip trqbva da se pokazva">
-                <div class="descp" style="float: right; align-items:flex-end;">Щом първите улични лампи светнат, за вас това е ясен сигнал да напуснете ролята на сериозна жена, да излезете да се забавлявате и да предизвикате скандал! Парфюмната вода Jean Paul Gaultier Scandal не само ви дава това право в света на ароматите, но дори го изисква.</div>
+<?php 
+
+            if ($product['available'] <=2)
+            {
+                print("Ограничено количество.");
+            }
+    if( $product['available'] == 0) {
+        print("Продуктът не е наличен.");
+    }
+?>
+                <img src="<?= $product['product_image']?>"  class="photo" alt="po princip trqbva da se pokazva">
+                <div class="descp" style="float: right; align-items:flex-end;"><?= $product['description']?></div>
         </div>
         
-            <div class="prais">275,00ЛВ</div>
+            <div class="prais"><?= $product['price']?>ЛВ</div>
     
         <a href="index.php?controller=orderpage">
             <button class="buy">Купи сега!</button>
