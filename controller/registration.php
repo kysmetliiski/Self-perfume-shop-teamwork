@@ -33,7 +33,6 @@ class Registration extends Controller
 			$email = $_POST['email'];
 			$password = $_POST['password'];
 
-
 			if (empty($name)) {
 				echo "<b style='color:red;'>Внимание! Полето име е задължително!</br>";
 			}
