@@ -56,3 +56,13 @@
           {
             max-height: 300px;
           }
+        
+        .row
+          {
+            padding-top: 50px;
+          }
+
+          .ss
+            {
+              border-bottom: none;
+            }
