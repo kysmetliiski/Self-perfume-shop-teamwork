@@ -1,0 +1,75 @@
+*   
+    {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
+.title  
+    {
+        padding-top: 70px;
+        padding-right: 60px;
+        flex-direction: column;
+        display: flex;
+        align-items: flex-end;
+        text-transform: capitalize;
+    }
+
+.title h1 
+    {
+        padding-bottom: 5px;
+    }
+.title h2
+    {
+        font-size: 13px;
+        padding-right: 208px;
+    }
+.price
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 80px;
+    }
+.prais
+    {
+        padding-right: 40px;
+        padding-bottom: 30px;
+        font-size: 18px;
+    }
+.buy
+    {
+        border-radius: 13px;
+        border: none;
+        color: black;
+        font-size: 18px;
+        text-transform: capitalize;
+        padding: 15px 32px;
+    }
+
+body
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+.photo
+    {
+        width: 780px;
+        padding-left: 40px;
+        max-width: 50%;
+    }
+.imagee  
+    {
+        padding-left: 200px;
+        max-width: 700px;
+        border: 2px solid black;
+        align-items: flex-start;
+    }
+
+.descp
+    {
+        float: right;
+        max-width: 430px;
+        font-size: 16px;
+    }
+    
+    

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маркови и оригинални парфюми </title>
+    <link rel="stylesheet" type="text/css" href="perfumes.css?v=24">
+</head>
+<body>
+    <?php 
+    include("navbar.html");
+    ?>
+
+   <div class="title">
+                        <h1><?= $product['name'] ?></h1>  
+                        <h2>Парфюмна вода за мъже</h2>
+    </div> 
+
+    <div class="imagee">
+        <?php 
+        
+                    if ($product['available'] <=2)
+                    {
+                        print("Ограничено количество.");
+                    }
+            if( $product['available'] == 0) {
+                print("Продуктът не е наличен.");
+            }
+        ?>
+                        <img src="<?= $product['product_image']?>"  class="photo" alt="po princip trqbva da se pokazva">
+                </div>
+
+    <div class="price">
+
+       
+        <div class="descp"><?= $product['description']?></div>
+
+            <div class="prais"><?= $product['price']?>ЛВ</div>
+    
+        <a href="index.php?controller=orderpage">
+            <button class="buy">Купи сега!</button>
+        </a>
+    </div>
+
+    
+       
+<h3>ostavi komentar hafke pele</h3>
+    <form method="post">
+        <input name="comment" type="textarea">
+        <input type="submit" name="submit">
+    </form>
+    <div class="comments"> <?= $comm['comment'] ?></div>
+
+
+
+    <div class="footer">
+    <?php 
+    include("footer.html")
+    ?>
+</div>
+</body>
+</html>

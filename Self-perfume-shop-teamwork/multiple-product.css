@@ -1,0 +1,68 @@
+.container
+    {
+       
+        border: 1px solid black;
+    }
+
+    .column {
+        float: left;
+        width: 25%;
+        padding-top: 60px;
+        border: 1px solid black;
+        padding-right: 20px;
+      }
+      
+      .row:after {
+        display: table;
+        clear: both;
+      }
+
+      .row
+        {
+            padding-top: 200px;
+            padding-left: 400px;
+        }
+        img
+          {
+            max-width: 200px;
+            padding-left: 50px;
+          }
+        small
+        {
+         
+          font-weight: 600;
+          font-size: 18px;
+          padding-bottom: 3px;
+          border-bottom: 1px solid black; 
+          transition: all 0.3s;
+        }
+        small:hover
+          {
+            background: rgba(34, 36, 37, 0.039);
+            color: rgb(132, 158, 158);
+            
+          }
+        p
+          {
+            padding-left: 80px;
+          }
+        a
+          {
+            text-decoration: none;
+            color: black;
+          }
+
+        .column
+          {
+            max-height: 300px;
+          }
+        
+        .row
+          {
+            padding-top: 50px;
+          }
+
+          .ss
+            {
+              border-bottom: none;
+            }
