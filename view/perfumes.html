@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Маркови и оригинални парфюми </title>
-    <link rel="stylesheet" type="text/css" href="perfumes.css?v=24">
+    <link rel="stylesheet" type="text/css" href="perfumes.css?v=25">
 </head>
 <body>
     <?php 
@@ -39,7 +39,7 @@
             <div class="prais"><?= $product['price']?>ЛВ</div>
     
         <a href="index.php?controller=orderpage">
-            <button class="buy">Купи сега!</button>
+            <button class="buy" onclick="myfun()">Купи сега!</button>
         </a>
     </div>
 
@@ -53,13 +53,20 @@
     <?php foreach($dataa as $item){
         ?>  
     <div class="comments"> 
-       <p> <?= $item['comment'] ?></p>
+       <p class="komentari"> <?= $item['comment'] ?></p>
     </div>
     <?php 
                                 }
     ?>
 
 
+
+    <script>
+        function  myfun()
+            {
+                confirm("izberete");
+            }
+    </script>
 
     <div class="footer">
     <?php 
