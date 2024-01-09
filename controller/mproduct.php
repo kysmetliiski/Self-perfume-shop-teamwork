@@ -9,9 +9,11 @@ class mproduct extends Controller
     }
     public function index()
     {
-        
+       $data = $this->model->fetchAll("SELECT * FROM perfumes", array());
 
-        $this->view->render("multiple-product.html");
+        $this->view->render("multiple-product.html", array(
+            "data" => $data,
+            ) );
     }
 }
 

@@ -13,10 +13,11 @@ class perfumes extends Controller
 
         $product = $this->model->fetch("SELECT * FROM perfumes WHERE id = ?", array( $id ) );
         $comm = $this->model->fetch("SELECT * FROM perfume_comments where id = ?", array( $id ) );
-
+        $dataa = $this->model->fetchAll("SELECT * FROM perfume_comments", array());
         $this->view->render("perfumes.html", array( 
             'product' => $product, 
-            'comm' => $comm
+            'comm' => $comm,
+            'dataa' => $dataa
         ) );
 
         if ( isset( $_POST['submit'] ) ) {

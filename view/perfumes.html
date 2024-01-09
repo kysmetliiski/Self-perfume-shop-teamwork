@@ -45,12 +45,19 @@
 
     
        
-<h3>ostavi komentar hafke pele</h3>
+<h3>ostavi komentar</h3>
     <form method="post">
         <input name="comment" type="textarea">
         <input type="submit" name="submit">
     </form>
-    <div class="comments"> <?= $comm['comment'] ?></div>
+    <?php foreach($dataa as $item){
+        ?>  
+    <div class="comments"> 
+       <p> <?= $item['comment'] ?></p>
+    </div>
+    <?php 
+                                }
+    ?>
 
 
 
