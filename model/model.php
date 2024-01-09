@@ -21,7 +21,7 @@ class Model
             {
                 $this->connection = new PDO("mysql:host=".($this->servername).";dbname=".($this->database), $this->username, $this->password);
                 $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            } 
+            }   
          catch(PDOException $e)
             {
                 echo "Connection failed: " . $e->getMessage();
@@ -32,7 +32,7 @@ class Model
     {
         $stmt = $this->connection->prepare($query); 
         $stmt->execute($params); 
-        return $stmt->fetch();
+        return $stmt->fetch(); 
         
     }
 
