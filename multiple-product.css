@@ -8,8 +8,11 @@
         float: left;
         width: 25%;
         padding-top: 60px;
+        height: 100%;
+        bottom: border-box;
         border: 1px solid black;
         padding-right: 20px;
+        padding-bottom: 82px;
       }
       
       .row:after {
@@ -19,14 +22,15 @@
 
       .row
         {
-            padding-top: 200px;
+            padding-top: 00px;
             padding-left: 400px;
+            height: 200px;
         }
         img
           {
             max-width: 200px;
             padding-left: 50px;
-            width: 33%;
+            height: 100%;
           }
         small
         {

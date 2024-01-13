@@ -11,30 +11,24 @@ class perfumes extends Controller
     {
         $id = $_GET['id'];
 
+        if ( isset( $_POST['submit'] ) ) {
+
+            $comment = $_POST['comment'];
+    
+            $this->model->datasave("INSERT INTO perfume_comments (perfume_id, comment) VALUES (?,?)",[$id, $comment]);
+    
+        }
+                                                
+
         $product = $this->model->fetch("SELECT * FROM perfumes WHERE id = ?", array( $id ) );
         $comm = $this->model->fetch("SELECT * FROM perfume_comments where id = ?", array( $id ) );
-        $dataa = $this->model->fetchAll("SELECT * FROM perfume_comments", array());
+        $dataa = $this->model->fetchAll("SELECT * FROM perfume_comments where perfume_id =$id", array());
         $this->view->render("perfumes.html", array( 
             'product' => $product, 
             'comm' => $comm,
             'dataa' => $dataa
         ) );
 
-        if ( isset( $_POST['submit'] ) ) {
-
-        $comment = $_POST['comment'];
-
-        $this->model->datasave("INSERT INTO perfume_comments (perfume_id, comment) VALUES (?,?)",[$id, $comment]);
-
-
-        $data = $this->model->fetchAll("
-        SELECT p.name
-        FROM perfumes p
-        LEFT JOIN perfume_comments pc ON pc.perfume_id = p.id
-        WHERE p.id= ?
-    ", [$id]);
-
-                                        }
     }
 }
 

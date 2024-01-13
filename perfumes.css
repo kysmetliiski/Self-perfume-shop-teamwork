@@ -75,7 +75,7 @@ body
 .komentari
     {
         font-size: 18px;
-        border: 2px black solid;
         padding: 12px 40px 12px 40px;
-        border-radius: 3px;
+        max-width: 700px;
     }
+
