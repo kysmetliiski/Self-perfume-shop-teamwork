@@ -14,7 +14,10 @@
 
 </div>
 <div class="left">
-    <div class="fragrance"><h1>Name of product</h1>
+    <?php foreach($data as $item) {
+        ?>
+       <p> <?= $item['id']?></p>
+    <div class="fragrance"><h1><?= $item['name']?></h1>
     </div>
     <div class="order">
        <div class="photo"> 
@@ -22,12 +25,17 @@
         </div>
         <h2>Order Now! afsdfsdfds</h2><br>
     </div>
+    <?php    
+           }
+    ?>
 </div>
 
 <div class="address">
-    <input type="text" class="adresz"> Адрес <br></input><br>
+    <form method="post">
+    <input type="text" class="adresz" name="adress"> Адрес <br></input><br>
     <div class="btnn">
-    <button type="submit" class="submit">Поръчай</button>
+    <button type="submit" class="submit" name="submit">Поръчай</button>
+</form>
 </div>
 </div>
 <?php 

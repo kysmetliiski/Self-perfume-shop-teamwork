@@ -9,9 +9,21 @@ class orderpage extends Controller
     }
     public function index()
     {
+        $id = $_GET['id'];
         
+        if ( isset( $_POST['submit'] ) ) {
 
-        $this->view->render("orderpage.html");
+            $adress = $_POST['adress'];
+    
+            $this->model->datasave("INSERT INTO perfume_orders (adress) VALUES (?)",[$adress]);
+    
+            $data= $this->model->fetchAll("SELECT * FROM perfumes WHERE id = $id" , array( $id ) );
+
+        }
+
+        $this->view->render("orderpage.html", array(
+            'data' => $data
+        ));
     }
 }
 
