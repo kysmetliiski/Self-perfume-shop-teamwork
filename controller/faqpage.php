@@ -1,6 +1,6 @@
 <?php 
 
-class misho extends Controller
+class faqpage extends Controller
 {
     function __construct()
     {
@@ -11,9 +11,8 @@ class misho extends Controller
     {
         
 
-        $this->view->render("misho.html");
+        $this->view->render("faqpage.html");
     }
+
 }
-
-
 ?> 
