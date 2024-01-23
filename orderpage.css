@@ -2,21 +2,17 @@
             {
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
               border: 1px black solid;
-              padding-top: 200px; 
-              padding-left: 130px;  
+              padding-top: 100px; 
+              padding-left: 110px;  
               max-width: 700px;
               max-height: 900px;
             } 
-         .order h2 
-            {
-                white-space: nowrap;
-
-            }
+      
 
             .left
             {
              padding-top: 100px;
-             padding-left: 5%;
+             padding-left:3%;
             }
 
             .address
@@ -28,7 +24,7 @@
             .fragrance 
             {
                 float: left;
-                padding-left: 6%;
+                padding-left: 11%;
             } 
 
             .submit
@@ -45,4 +41,12 @@
            .btnn
             { 
                 padding-left: 50px;
+            }
+
+            p{
+                float: right;
+                padding-right: 80px;
+                padding-top: 200px;
+                font-size: 18px;
+                font-weight: 400;
             }

@@ -15,14 +15,13 @@ class orderpage extends Controller
 
             $adress = $_POST['adress'];
     
-            $this->model->datasave("INSERT INTO perfume_orders (adress) VALUES (?)",[$adress]);
-    
-            $data= $this->model->fetchAll("SELECT * FROM perfumes WHERE id = $id" , array( $id ) );
-
+            $this->model->datasave("INSERT INTO perfume_orders (adress, perfume_id) VALUES (?, ?)",[$adress,$id ]);
         }
 
+        $product = $this->model->fetch("SELECT * FROM perfumes WHERE id = ?", array( $id ) );
+
         $this->view->render("orderpage.html", array(
-            'data' => $data
+            'product' => $product
         ));
     }
 }

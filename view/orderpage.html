@@ -5,29 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>order</title>
-    <link rel="stylesheet" type="text/css" href="orderpage.css">
+    <link rel="stylesheet" type="text/css" href="orderpage.css?v=2">
 </head>
+<style>
+    img{
+        width: 78%;
+    }
+    .fragrance{
+        text-transform: capitalize;
+    }
+</style>
 <body>
     <?php 
     include("navbar.html");
+
     ?>
 
 </div>
 <div class="left">
-    <?php foreach($data as $item) {
-        ?>
-       <p> <?= $item['id']?></p>
-    <div class="fragrance"><h1><?= $item['name']?></h1>
+  
+    <div class="fragrance"><h1 name="name"><?= $product['name']?></h1>
     </div>
+ <p> <?=$product['price']?> Лева</p>
     <div class="order">
        <div class="photo"> 
-            <img src="photos/jean-paul.jpg" style="max-width: 500px; padding-left: 4%; padding-right: 200px;">
+            <img src="<?= $product['product_image']?>" style="max-width: 500px; padding-left: 4%; padding-right: 200px;">
         </div>
-        <h2>Order Now! afsdfsdfds</h2><br>
     </div>
-    <?php    
-           }
-    ?>
 </div>
 
 <div class="address">

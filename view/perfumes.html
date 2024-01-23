@@ -19,7 +19,6 @@
 
     <div class="imagee">
         <?php 
-        
                     if ($product['available'] <=2)
                     {
                         print("Ограничено количество.");
@@ -38,8 +37,8 @@
 
             <div class="prais"><?= $product['price']?>ЛВ</div>
     
-        <a href="index.php?controller=orderpage">
-            <button class="buy" onclick="myfun()">Купи сега!</button>
+        <a href="index.php?controller=orderpage&id=<?= $product['id'] ?>">
+            <button class="buy">Купи сега!</button>
         </a>
     </div>
 
@@ -61,12 +60,7 @@
 
 
 
-    <script>
-        function  myfun()
-            {
-                confirm("izberete");
-            }
-    </script>
+   
     <div class="footer">
     <?php 
     include("footer.html")
