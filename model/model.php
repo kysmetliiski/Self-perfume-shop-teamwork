@@ -15,7 +15,7 @@ class Model
     {
         $this->servername = "127.0.0.1";
         $this->username = "root";
-        $this->password = "123456789";
+        $this->password = "veselin7";
         $this->database = "perfumes";
         try 
             {
