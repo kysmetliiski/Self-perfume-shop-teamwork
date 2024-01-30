@@ -8,7 +8,7 @@
 }
 .slider {
     display: flex;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 11;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -19,6 +19,7 @@
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
+    width: 60%;
 }
 .slider-nav{
     display: flex;
