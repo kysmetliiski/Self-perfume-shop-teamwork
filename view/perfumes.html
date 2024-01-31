@@ -4,86 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Маркови и оригинални парфюми </title>
+                                <title>Маркови и оригинални парфюми </title>
     <link rel="stylesheet" type="text/css" href="perfumes.css?v=27">
     <link rel="stylesheet" type="text/css" href="slider.css?v=3">
-
-
 </head>
 <body>
     <?php 
     include("navbar.html");
     ?>
-
-   <div class="title">
-                        <h1><?= $product['name'] ?></h1>  
-                        <h2>Парфюмна вода за мъже</h2>
+    <div class="title">
+                <h1><?= $product['name'] ?></h1>  
+                <h2>Парфюмна вода за мъже</h2>
     </div> 
 
-    <div class="imagee">
-        <?php 
-                    if ($product['available'] <=2)
-                    {
-                        print("Ограничено количество.");
-                    }
-            if( $product['available'] == 0) {
-                print("Продуктът не е наличен.");
-            }
-        ?>
-
-        <?php foreach($photos as $item) { ?>
-                
-            <section class="container">
-                <div class="slider-wrapper">
-                    <div class="slider">
-                        <img id="slide-1" src="<?= $item['photo1']?>" alt="ddz zavisi kuv e shibaniq image" />
-                        <img id="slide-2" src="<?= $item['photo2']?>" alt="ddz zavisi kuv e shibaniq image" />
-                        <img id="slide-3" src="<?= $item['photo3']?>" alt="ddz zavisi kuv e shibaniq image" />
-                        <img id="slide-4" src="<?= $item['photo4']?>" alt="ddz zavisi kuv e shibaniq image" />
-
-                    </div>
-                    <div class="slider-nav">
-                        <a href="#slide-1"></a>
-                        <a href="#slide-2"></a>
-                        <a href="#slide-3"></a>
-                        <a href="#slide-4"></a>
-
-                    </div>
-                </div>
-        </section>
-        <?php } ?>    
-                </div>
-
+            <div class="imagee">
+                            <?php 
+                                if ($product['available'] <=2)
+                                    {
+                                        print("Ограничено количество.");
+                                    }
+                                if ($product['available'] == 0)
+                                    {
+                                        print("Продуктът не е наличен.");
+                                    }
+                            ?>
+                            <?php foreach($photos as $item) { ?>  
+                        <section class="container">
+                                <div class="slider-wrapper">
+                                    <div class="slider">
+                                        <img id="slide-1" src="<?= $item['photo1']?>" alt=""/>
+                                        <img id="slide-2" src="<?= $item['photo2']?>" alt=""/>
+                                        <img id="slide-3" src="<?= $item['photo3']?>" alt=""/>
+                                        <img id="slide-4" src="<?= $item['photo4']?>" alt=""/>
+                                    </div>
+                                                <div class="slider-nav">
+                                                        <a href="#slide-1"></a>
+                                                        <a href="#slide-2"></a>
+                                                        <a href="#slide-3"></a>
+                                                        <a href="#slide-4"></a>
+                                                </div>
+                                </div>
+                        </section>
+                            <?php } ?>    
+            </div>
 
     <div class="price">
-
-       
         <div class="descp"><?= $product['description']?></div>
-
             <div class="prais"><?= $product['price']?>ЛВ</div>
     
-        <a href="index.php?controller=orderpage&id=<?= $product['id'] ?>">
-            <button class="buy">Купи сега!</button>
-        </a>
+                <a href="index.php?controller=orderpage&id=<?= $product['id'] ?>">
+                        <button class="buy">Купи сега!</button>
+                </a>
     </div>
 
-    
-       
 <h3>ostavi komentar</h3>
-    <form method="post">
-        <input name="comment" type="textarea">
-        <input type="submit" name="submit" style="border-bottom: 1px solid black">
-    </form>
+            <form method="post">
+                <input name="comment" type="textarea">
+                <input type="submit" name="submit" style="border-bottom: 1px solid black">
+            </form>
                             <?php foreach($dataa as $item){
                                 ?>  
-                            <div class="comments"> 
-                            <p class="komentari"><?= $item['perfume_id'] ?> <?= $item['comment'] ?></p>
-                            </div>
+                                    <div class="comments"> 
+                                    <p class="komentari"><?= $item['comment'] ?></p>
+                                    </div>
                             <?php 
-                                                        }
+                                                           }
                             ?>
-
-
 
    
     <div class="footer">
