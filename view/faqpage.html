@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница с Често Задавани Въпроси</title>
+    <title>Страница с Често Задавани Въпроси - Parafimo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,55 +19,93 @@
         }
 
         .question {
-            font-weight: bold;
+            font-weight: 550;
+            font-size: 20px;
+            margin-left: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 100px;
         }
 
         .answer {
             margin-bottom: 10px;
         }
+
+        .itext{
+            text-indent: 10px;
+            padding-left: 10px;
+            padding-top: 20px;
+            max-width: 780px;
+            text-align: justify;
+            font-size: 19px;
+            font-weight: 500;
+        }
+
+        .choose{
+            max-width: none;
+        }
+
+        .a{
+            text-decoration: underline;
+            color: rgb(198, 84, 84);
+            font-size: 19px;
+        }
+        .image{
+            height: 300px;
+            width: 800px;
+            padding-left:200px ;
+            padding-right: 60px;
+            float: right;
+            }
     </style>
+    
 </head>
-<body>
+<body style="background-color: rgb(235, 233, 233) ;">
 
-    <h1>Често Задавани Въпроси</h1>
+<?php
+ include("navbar.html");
+?>
+                                    <h1 style="padding-top: 20px ;">Често Задавани Въпроси</h1>
 
     <div class="faq-section">
-        <div class="question">Кои сте вие?</div>
+        <div class="question">Кои сме ние?</div>
         <div class="answer">
-            <a href="index.php?controller=aboutuspage">
-                <button class="answer" onclick="myfun()">Ние сме</button>
-            </a>
+            <img src="photos/aboutus.jpg" alt="" class="image">
+            <p class="itext">
+              Ние сме Parafimo, където съчетаваме елегантност и качество във всяка капка аромат. Ние сме посветени на предлагането на изискани парфюми, които подчертават индивидуалността ви. С любов подбираме уникални аромати от водещи световни марки. Нашата мисия е да ви предоставим незабравимо преживяване, обгръщайки вас със съвършенство и стил. Разгледайте нашите колекции и открийте своята лична ароматна история с нас. За да разгледате участниците в екипа и научите повече информация за тях, може да натиснете <a href="index.php?controller=aboutuspage" class="a"> тук</a>.
+            </p>
+           
+
         </div>
     </div>
 
-    <div class="faq-section">
-        <div class="question">Как мога да се свържа със support?</div>
-        <div class="answer">
-            <a href="https://www.instagram.com/_atanasowww7/">
-                <button class="answer" onclick="myfun()">Натиснете тук, за да се свържете с нас</button>
-            </a>
-        </div>
-    </div>
-
-    <div class="faq-section">
-        <div class="question">Какво се случва с въведените от мен данни?</div>
-        <div class="answer">
-            <a href="index.php?controller=danni">
-                <button class="answer" onclick="myfun()">Защита на вашите данни</button>
-            </a>
-        <div>
-    </div>
+    
 
     <div class="faq-section">
         <div class="question">Как да си избера парфюм, който наистина ще харесвам?</div>
         <div class="answer">
-            Може да е трудно. „Намирането на правилния аромат е почти толкова трудно, колкото намирането на правилния мъж“,
-            оплака се списание Allure. Може да смятате, че няма логика в избора ви на парфюми, защото обонянието ви е толкова емоционално, но ароматите, на които най-много се наслаждавате, вероятно ще принадлежат само на едно или две от четиринадесетте различни семейства аромати.
+            <p class="itext">            Може да е трудно. „Намирането на правилния аромат е почти толкова трудно, колкото намирането на правилния мъж“,оплака се списание Allure. Може да смятате, че няма логика в избора ви на парфюми, защото обонянието ви е толкова емоционално, но ароматите, на които най-много се наслаждавате, вероятно ще принадлежат само на едно или две от четиринадесетте различни семейства аромати.
             Като повечето хубави неща, отнема малко усилия, за да намерите нов парфюм, който е точно както трябва. Опитайте нашия търсач на аромати и ние ще свършим тежката работа вместо вас.
-            
+        </p>
+        <img src="photos/scent.jpg" alt="" style="padding-left:450px; padding-top: 20px;">
         <div>
-    </div>    
+    </div>  
+    
+    <div class="faq-section">
+        <div class="question">Какво се случва с въведените от мен данни?</div>
+        <div class="answer">
+           
+              <p class="itext"> Когато използвате нашия уебсайт, събираме различна информация от вас. Това включва вашите лични данни, социални връзки и съдържание, което споделяте. Ние гарантираме, че вашите данни са в безопасност и се съхраняват в сигурна облачна среда.
 
+                    Вашите данни се използват за персонализация на съдържание и реклами, които виждате, с цел да ви предложим по-релевантни и интересни информационни потоци. Възможно е да споделяме част от вашите данни с партньори, като рекламодатели, за да подобрим качеството на услугите и да генерираме приходи.
+                    
+                    При нас се отнасяме сериозно към защитата на вашите данни, прилагаме криптиране и контрол върху достъпа. Ние спазваме всички регулации за защита на данните и се стремим да предоставим сигурно и удобно изживяване при използването на уебсайта. Важно е да знаете, че вашата лична неприкосновеност е от първостепенно значение за нас. <a href="index.php?controller=danni" class="a">може да проверите нашите условия и поверителност тук</a>.</p>
+        <div>
+    </div>
 
+<?php 
+include("footer.html");
+?>
 </body>
 </html>
