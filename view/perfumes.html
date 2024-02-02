@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                                 <title>Маркови и оригинални парфюми </title>
-    <link rel="stylesheet" type="text/css" href="perfumes.css?v=27">
+    <link rel="stylesheet" type="text/css" href="perfumes.css?v=28">
     <link rel="stylesheet" type="text/css" href="slider.css?v=3">
 </head>
 <body>
@@ -56,16 +56,15 @@
                         <button class="buy">Купи сега!</button>
                 </a>
     </div>
-
-<h3>ostavi komentar</h3>
+        <div class="line"></div>
             <form method="post">
-                <input name="comment" type="textarea">
+                <input name="comment" type="textarea" placeholder="Остави коментар.." style="padding-top: 20px">
                 <input type="submit" name="submit" style="border-bottom: 1px solid black">
             </form>
                             <?php foreach($dataa as $item){
                                 ?>  
                                     <div class="comments"> 
-                                    <p class="komentari"><?= $item['comment'] ?></p>
+                                    <p class="komentari"><?= $item['comment'] ?> <br> <?=$item['perfume_id']?></p>
                                     </div>
                             <?php 
                                                            }
