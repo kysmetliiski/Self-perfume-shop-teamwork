@@ -24,8 +24,6 @@
     ?>
     
 
-    <h1 style="padding-top: 40px; font-size: 24px;">jenski perfumes</h1>
-    <p>trebva da gi smena teq slimki i da avtomatiziram multiple products kakto single product ama she mi trebva malko pomo6 ot gospodina inache single product si vodi kym jenskite perfumes</p>
         <div class="row">
 
    <?php 
@@ -35,7 +33,9 @@
                 <a href="index.php?controller=perfumes&id=<?= $item['id']?>">
                 <img src="<?= $item['product_image']?>" alt="" style="width: 33%; padding-left: 110px;">
                 <small><br><?= $item['name'] ?></small>
-                <p>Парфюмна вода за жени 100ml</p>
+                <p>
+                    Парфюмна вода за жени 100ml
+                 </p>
                 <small class="no"><?= $item['price']?></small>
                 </a>
             </div>
@@ -46,11 +46,11 @@
            
           </div>
  
-<!-- 
-  <div class="footer">
+
+  <!-- <div class="footer">
 <?php 
 include("footer.html");
-?>  
-</div> -->
+?>   -->
+</div> 
 </body>
 </html>

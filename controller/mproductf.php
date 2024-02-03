@@ -9,7 +9,7 @@ class mproductf extends Controller
     }
     public function index()
     {
-        $data = $this->model->fetchAll("SELECT * FROM perfumes", array());
+        $data = $this->model->fetchAll("SELECT * FROM perfumes WHERE type='f'", array());
 
         $this->view->render("multiple-product-female.html", array(
             "data" => $data,

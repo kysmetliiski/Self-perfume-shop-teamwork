@@ -38,7 +38,7 @@
           font-weight: 600;
           font-size: 18px;
           padding-bottom: 3px;
-          border-bottom: 1px solid black; 
+          border-bottom: 1px solid black;
           transition: all 0.3s;
         }
         small:hover

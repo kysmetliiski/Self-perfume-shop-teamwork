@@ -75,13 +75,19 @@ body
 .komentari
     {
         font-size: 18px;
-        padding: 22px 40px 22px 40px;
+        padding: 32px 40px 22px 40px;
         max-width: 700px;
     }
 
 .line{
     border-bottom: 1px solid #bebec0;
-    width: 950px;
+    width: 1200px;
+}
+
+.inputc{
+    padding-right: 280px;
+    padding-bottom: 50px;
+    padding-left: 10px;
 }
 
     

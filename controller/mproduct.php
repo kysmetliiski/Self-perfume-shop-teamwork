@@ -12,7 +12,7 @@ class mproduct extends Controller
 
 
 
-       $data = $this->model->fetchAll("SELECT * FROM perfumes", array());
+       $data = $this->model->fetchAll("SELECT * FROM perfumes WHERE type='m'", array());
 
         $this->view->render("multiple-product.html", array(
             "data" => $data,
