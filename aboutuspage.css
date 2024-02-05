@@ -75,12 +75,15 @@ body {
 /* THE MAINCONTAINER HOLDS EVERYTHING */
 .maincontainer{
   position: relative;
-  width: 250px;
-  height: 320px;
+  width: 90%;
+  height: 40%;
   background: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 40px;
+  padding-left: 3%;
 
 }
 
@@ -111,7 +114,6 @@ body {
   border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
-  background: #ffc728;
   color: #000;
 }
 
@@ -142,15 +144,13 @@ body {
 
 .thefront p, .theback p{
   font-family: 'zilla slab', sans-serif;
-  padding: 30px;
   font-weight: normal;
   font-size: 12px;
   text-align: center;
 }
 
 .first{
-  padding-right: 1140px;
-  padding-top: 200px;
+  padding-top: 200px; 
 }
 
 .overlay{
@@ -166,4 +166,8 @@ body {
   font-size: 12px;
   font-weight: 600;
   white-space: nowrap;
+}
+.second{
+  padding-right: 50%;
+  padding-top: 200px;
 }
