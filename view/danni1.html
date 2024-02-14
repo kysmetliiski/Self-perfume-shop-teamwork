@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .positioning{
+        text-transform: capitalize;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        padding-top: 40px;
+    }
+
+    button{
+        border: none;
+        padding: 20px 10px;
+        border-radius: 8px;
+        text-transform: capitalize;
+    }
+
+    .moveeee{
+        padding-top: 100px;
+        font-size: 20px;
+            }
+</style>
+<body>
+    <?php 
+        include("navbar.html");
+    ?>
+    
+
+    <div class="moveeee">
+        <?php   print_r($cart);?>
+    </div>
+    <h1 style="padding-top: 80px; font-size: 22px; font-weight: bolder; text-transform: capitalize; text-align: center;">Вие успешно добавихте продукт в количката! </h1>
+
+    <div class="positioning">
+        <a href="index.php?controller=mproduct">
+    <button>продължи пазаруването</button>
+        </a>
+    <a href="index.php?controller=shoppingcart&">
+    <button>поръчай сега</button>
+    </a>
+    </div>
+
+</body>
+</html>

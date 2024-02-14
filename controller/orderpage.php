@@ -18,10 +18,11 @@ class orderpage extends Controller
             $this->model->datasave("INSERT INTO perfume_orders (adress, perfume_id) VALUES (?, ?)",[$adress,$id ]);
         }
 
-        $product = $this->model->fetch("SELECT * FROM perfumes WHERE id = ?", array( $id ) );
-
+        $product = $this->model->fetch  ("SELECT * FROM perfumes WHERE id = ?", array( $id ) );
+        
         $this->view->render("orderpage.html", array(
-            'product' => $product
+            'product' => $product,
+            'cart' => $_SESSION['cart']
         ));
     }
 }

@@ -18,7 +18,7 @@
 <body>
     <?php 
     include("navbar.html");
-
+    print_r($cart);
     ?>
 
 </div>
@@ -38,7 +38,13 @@
     <form method="post">
     <input type="text" class="adresz" name="adress"> Адрес <br></input><br>
     <div class="btnn">
+      
     <button type="submit" class="submit" name="submit">Поръчай</button>
+        <?php 
+        if(isset($_POST['submit'])){
+            header("location: index.php?controller=succesfulord");
+            exit;}
+            ?>
 </form>
 </div>
 </div>

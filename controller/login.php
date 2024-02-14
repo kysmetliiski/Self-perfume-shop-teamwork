@@ -14,8 +14,7 @@ class Login extends Controller
 
       $error = "";
         
-// стартиране на сесия ( ще трябва по-долу )
-                session_start();
+
 
               
 

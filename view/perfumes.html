@@ -52,6 +52,10 @@
         <div class="descp"><?= $product['description']?></div>
             <div class="prais"><?= $product['price']?>ЛВ</div>
     
+
+            <a href="index.php?controller=scart&id=<?= $product['id'] ?>">
+                <button class="buy">Добави в количката</button>
+        </a>
                 <a href="index.php?controller=orderpage&id=<?= $product['id'] ?>">
                         <button class="buy">Купи сега!</button>
                 </a>

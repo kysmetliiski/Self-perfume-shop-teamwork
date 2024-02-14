@@ -6,7 +6,7 @@ class perfumes extends Controller
     {
         
         parent::__construct();
-    }
+    } 
     public function index()
     {
         $id = $_GET['id'];

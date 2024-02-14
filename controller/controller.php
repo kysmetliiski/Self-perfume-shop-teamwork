@@ -9,6 +9,8 @@ class Controller
     {
         $this->view = new View();
         $this->model =  new Model();
+
+        session_start();
     }
     
 }

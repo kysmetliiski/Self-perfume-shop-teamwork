@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping cart multiple product view</title>
+</head>
+<style>
+    .productsz{
+        width: 900px;
+        height: 500px;
+        border: 1px solid black;
+        display: flex;
+    } 
+.ph{
+   
+    width: 10%;
+    height: 100%;
+    float: inline-start;
+
+}
+
+.title{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle{
+    padding-left: 20px;
+    font-size: 12px;
+}
+.itemz{
+    max-height: 100px;
+    border-bottom: 1px solid black;
+    width: 900px;
+}
+.price{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+    font-size: larger;
+    font-weight: bold;
+}
+.complete{
+   margin-top: 200px;
+    padding-left: 700px;
+}
+.nz{
+    padding: 10px 20px 10px;
+}
+</style>
+<body>
+    <?php 
+    include("navbar.html");
+    ?>
+ <div style="padding-top: 100px;"></div>
+    <?php  foreach($product as $p) {?>
+
+<div class="productsz">
+    <div class="itemss">
+    <div class="itemz">
+        <img src="<?= $p['product_image']?>" alt="" class="ph">
+            <div class="title">
+                <p class="title"><?= $p['name']?></p>
+                <small class="subtitle">Парфюмна вода за мъже 100мл.</small>
+            </div>
+            <small class="price"><?=$p['price']?></small>
+    </div>
+    <?php }?>
+    
+</div>
+<div class="complete">
+    <form method="post">
+    <input type="text" class="adresz" name="adress" style="padding: 12px 30px 12px 30px;"> Адрес <br></input><br>
+    <button class="nz" type="submit" name="submit">завърши поръчката</button>
+</form>
+
+<!-- <?php 
+    if(isset( $_POST["submit"])) {
+       header("location:index.php?controller=succesfulord.html");
+       exit;
+    }
+?> -->
+    </div>
+</div>
+
+
+
+
+<?php 
+include("footer.html");
+?>
+</body>
+</html>
