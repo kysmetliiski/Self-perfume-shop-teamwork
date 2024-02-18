@@ -15,8 +15,8 @@
     } 
 .ph{
    
-    width: 10%;
-    height: 100%;
+    width: 8%;
+    height: 90%;
     float: inline-start;
 
 }
@@ -41,7 +41,7 @@
 .price{
     display: flex;
     justify-content: flex-end;
-    padding-right: 5px;
+    margin-right:45px;
     font-size: larger;
     font-weight: bold;
 }
@@ -52,25 +52,36 @@
 .nz{
     padding: 10px 20px 10px;
 }
+.h6{
+   margin-left: 780px;
+   margin-right: 10px;
+}
+.itemz img{
+    width: 72px;
+    height: 72px;
+}
 </style>
 <body>
     <?php 
-    include("navbar.html");
+    include("navbar.html");        
     ?>
+
  <div style="padding-top: 100px;"></div>
-    <?php  foreach($product as $p) {?>
 
 <div class="productsz">
+    
+    <?php  foreach($product as $p) {?>
     <div class="itemss">
     <div class="itemz">
         <img src="<?= $p['product_image']?>" alt="" class="ph">
             <div class="title">
-                <p class="title"><?= $p['name']?></p>
+                <p class="title" style="padding-left:10px;"><?= $p['name']?></p>
                 <small class="subtitle">Парфюмна вода за мъже 100мл.</small>
+                <button onclick="myfun()" class="h6">x</button>
             </div>
             <small class="price"><?=$p['price']?></small>
     </div>
-    <?php }?>
+    <?php } ?>
     
 </div>
 <div class="complete">
