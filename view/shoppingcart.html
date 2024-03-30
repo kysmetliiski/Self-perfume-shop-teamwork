@@ -77,7 +77,9 @@
             <div class="title">
                 <p class="title" style="padding-left:10px;"><?= $p['name']?></p>
                 <small class="subtitle">Парфюмна вода за мъже 100мл.</small>
-                <button onclick="myfun()" class="h6">x</button>
+               <a href="index.php?controller=neword&id=<?=$p['id']?>">
+                <button class="h6" >x</button>
+                </a>
             </div>
             <small class="price"><?=$p['price']?></small>
     </div>
@@ -85,17 +87,11 @@
     
 </div>
 <div class="complete">
+    <h5> Общо: <?=  $sum['sum']?>.00 лева</h5>
     <form method="post">
-    <input type="text" class="adresz" name="adress" style="padding: 12px 30px 12px 30px;"> Адрес <br></input><br>
+    <input type="text" class="adresz" name="adress" style="padding: 12px 30px 12px 30px;" required> Адрес <br></input><br>
     <button class="nz" type="submit" name="submit">завърши поръчката</button>
 </form>
-
-<!-- <?php 
-    if(isset( $_POST["submit"])) {
-       header("location:index.php?controller=succesfulord.html");
-       exit;
-    }
-?> -->
     </div>
 </div>
 

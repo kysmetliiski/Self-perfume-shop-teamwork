@@ -32,7 +32,6 @@
 <body>
     <?php 
     include("navbar.html");
-    echo $error
     ?>
     <div class="move" style="padding-left: 570px; padding-top: 90px;">
     <div class="containerr">
@@ -47,6 +46,9 @@
         <label>Парола</label><br>
         <input type="password" name="password"  class='form-control'><br><br>
         <input type="submit" name="submit" value="Изпрати" class='btn btn-secondary w-100' style="padding-top:6px ;">
+        <?php 
+        echo $error;
+        ?>
     </form>
 </div>
 </div>

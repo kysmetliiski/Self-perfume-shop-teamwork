@@ -84,7 +84,7 @@ class Registration extends Controller
 		}
 
 
-			
+			 
 
 		$params = array
 		(
