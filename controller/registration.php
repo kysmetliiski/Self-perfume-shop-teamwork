@@ -13,7 +13,7 @@ class Registration extends Controller
 		
 		$servername = "127.0.0.1";
 		$username = "root";
-		$password = "veselin7";
+		$password = "12345";
 		$database = "perfumes";
 
 		try {
@@ -32,6 +32,7 @@ class Registration extends Controller
 			$lname = $_POST['lname'];
 			$email = $_POST['email'];
 			$password = $_POST['password'];
+			$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 			if (empty($name)) {
 				echo "<b style='color:red;'>Внимание! Полето име е задължително!</br>";
@@ -80,7 +81,7 @@ class Registration extends Controller
 	// INSERT заявка към базата, с която се записват полетата
 
 			
-			$this->model->datasave("INSERT INTO registration ( name,lname, email, password) VALUES (?,?,?,?)",[$name,$lname, $email, $password]);
+			$this->model->datasave("INSERT INTO registration ( name,lname, email, password) VALUES (?,?,?,?)",[$name,$lname, $email, $hashed_password]);
 		}
 
 

@@ -6,61 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shopping cart multiple product view</title>
 </head>
-<style>
-    .productsz{
-        width: 900px;
-        height: 500px;
-        border: 1px solid black;
-        display: flex;
-    } 
-.ph{
-   
-    width: 8%;
-    height: 90%;
-    float: inline-start;
-
-}
-
-.title{
-    font-size: 20px;
-    text-transform: capitalize;
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-}
-
-.subtitle{
-    padding-left: 20px;
-    font-size: 12px;
-}
-.itemz{
-    max-height: 100px;
-    border-bottom: 1px solid black;
-    width: 900px;
-}
-.price{
-    display: flex;
-    justify-content: flex-end;
-    margin-right:45px;
-    font-size: larger;
-    font-weight: bold;
-}
-.complete{
-   margin-top: 200px;
-    padding-left: 700px;
-}
-.nz{
-    padding: 10px 20px 10px;
-}
-.h6{
-   margin-left: 780px;
-   margin-right: 10px;
-}
-.itemz img{
-    width: 72px;
-    height: 72px;
-}
-</style>
+<link rel="stylesheet"  type="text/css" href="shoppingcart.css?v=2">
 <body>
     <?php 
     include("navbar.html");        
@@ -90,7 +36,7 @@
     <h5> Общо: <?=  $sum['sum']?>.00 лева</h5>
     <form method="post">
     <input type="text" class="adresz" name="adress" style="padding: 12px 30px 12px 30px;" required> Адрес <br></input><br>
-    <button class="nz" type="submit" name="submit">завърши поръчката</button>
+    <button class="nz" type="submit" name="submit" style="margin-left: 30px;">завърши поръчката</button>
 </form>
     </div>
 </div>
