@@ -13,7 +13,7 @@ class Registration extends Controller
 		
 		$servername = "127.0.0.1";
 		$username = "root";
-		$password = "veselin7";
+		$password = "12345";
 		$database = "perfumes";
 
 		try {
@@ -33,7 +33,6 @@ class Registration extends Controller
 			$email = $_POST['email'];
 			$password = $_POST['password'];
 			$hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
 
 			if (empty($name)) {
 				echo "<b style='color:red;'>Внимание! Полето име е задължително!</br>";
