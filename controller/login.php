@@ -9,37 +9,41 @@ class Login extends Controller
         parent::__construct();
     }
 
-    public function index()
+public function index()
     {
-
       
-      $error = "";
+      $error = ""; 
 
-      if ( isset( $_POST['submit'] ) ) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+      if ( isset( $_POST['submit'] ) ) 
+            {
+                  $email = $_POST['email'];
+                  $password = $_POST['password'];
 		
-                              if (!$email){
-                                    $err= "<b style='color:red;'>Грешни данни!</b><br>";
-                              $error = true;
-                              }
+      $user = $this->model->fetch("SELECT * FROM registration WHERE email = ? AND password = ?",[ $email, $password ]);
+                       
+                        if ( $user ) 
+                        {
+                   $_SESSION['user'] = $user;
 
-                              if (!$password){
-                                    $err= "<b style='color:red;'>Грешни данни!</b><br>";
-                                    $error = true;
-                              }
-            else{
-                  header("location:index.php?controller=mproduct");
-            }
-        $user = $this->model->fetch("SELECT * FROM registration WHERE email = ? AND password = ?",[ $email, $password ]);
+                  header("location: index.php?controller=mproduct");
+                  
+                  exit; 
+                        }
+
+                        else{
+                              $error= "<b style='color:red;'>Грешни данни!</b><br>";
+                        }
+
+                       
 
         
                                         }                              
-        $params = array
-              (
-                    "err" => $error 
-              );
-        $this->view->render("login.html", $params);
+                  $params = array
+                        (
+                              "err" => $error 
+                        );
+
+        $this->view->render("login.html", @$params);
       }
 }
 

@@ -1,0 +1,24 @@
+form
+{
+    padding-top: 50px;
+}
+
+    .containerr 
+{
+width: 380px;
+height: 500px;
+background-color: #f3e8d7;
+text-align: center;
+padding-top: 30px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(196, 136, 224, 0.1);
+}
+
+.form-control
+{
+width: 40%;
+}
+
+.position{
+    margin-left: 150px;
+  }

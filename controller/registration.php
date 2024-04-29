@@ -13,7 +13,7 @@ class Registration extends Controller
 		
 		$servername = "127.0.0.1";
 		$username = "root";
-		$password = "12345";
+		$password = "veselin7";
 		$database = "perfumes";
 
 		try {

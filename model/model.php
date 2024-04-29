@@ -15,7 +15,7 @@ class Model
     {
         $this->servername = "127.0.0.1";
         $this->username = "root";
-        $this->password = "12345";
+        $this->password = "veselin7";
         $this->database = "perfumes";
         try 
             {
@@ -55,6 +55,10 @@ class Model
         
     }
 
+    function query($query,$params)
+    {
+        return $this->connection->prepare($query)->execute($params);
+    }
 }
 
 

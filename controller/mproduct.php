@@ -10,7 +10,7 @@ class mproduct extends Controller
     public function index()
     {
 
-
+print_r($_SESSION);
 
        $data = $this->model->fetchAll("SELECT * FROM perfumes WHERE type='m' ", array());
 

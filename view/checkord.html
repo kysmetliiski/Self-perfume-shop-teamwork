@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list with your orders</title>
+</head>
+<link rel="stylesheet" type="text/css" href="checkord.css?v=3">
+<body>
+    <?php 
+    include("navbar.html");
+    ?>
+
+<div class="aa">
+    <div class="container">
+            <div class="title">
+                <h1>вашите поръчки</h1> <br>
+            </div> 
+
+            <?php if($order){?>
+
+                <div class="descp">
+                    <div class="single">
+                        <p>Поръчка #1 </p>
+                        <a href="index.php?controller=removeord&id=<?=$order['id']?>">
+                        <p class="reject">Откажи поръчката</p>
+                        </a>
+                <?php foreach($product as $p) {?>
+                <p style="max-width:300px; text-transform: capitalize; font-size: 16px;"><?= $p['name'] ?></p>
+                <?php }?>
+                <small style="float: right;"> Цена:  <?=  $sum['sum']?> лева </small>
+                     <p>status:<?= $order['status']?></p>
+            
+            </div>
+            </div>
+                <?php }
+                else{          
+                          ?>
+
+
+    <h1 class="titles">Все още няма заявени поръчки от вашият профил.</h1>
+    <h1 class="titles"> Разгледайте нашият асортимент <a href="index.php?controller=sections" class="redirect"> сега!</a></h1>
+
+                          <?php } ?>
+    </div>
+</div>
+</body>
+</html>

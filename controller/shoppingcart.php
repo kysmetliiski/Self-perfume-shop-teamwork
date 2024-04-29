@@ -20,13 +20,13 @@ class shoppingcart extends controller{
 
                 $string .= $p;
             }
+     print_r($_SESSION); 
 
-//         print_r($_SESSION);
+      @       $user =$_SESSION['user']['id'];
 
-     @       $user =$_SESSION['user']['id'];
+// $user = $this->model->fetch("SELECT id FROM registration");
 
-
-        $product = $this->model->fetchAll  ("SELECT * FROM perfumes WHERE id IN ( $string ) ", array() );
+    $product = $this->model->fetchAll  ("SELECT * FROM perfumes WHERE id IN ( $string ) ", array() );
 
         $sum = $this->model->fetch  ("SELECT sum(price) as `sum` FROM perfumes WHERE id IN ( $string ) ", array() );
 

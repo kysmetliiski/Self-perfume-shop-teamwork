@@ -8,7 +8,12 @@ body{
         font-weight: 400;
         font-size: 12px;
     }
-.navbar-left , .navbar-right
+
+.logoimg{
+    width: 70px;
+    height: 55px;
+}
+ .navbar-left
     {
         width: 60px;
         border-radius: 10px;
@@ -19,6 +24,7 @@ body{
         cursor: pointer;
  
     }
+
 .navbar
     {
         text-transform: uppercase;
@@ -30,11 +36,6 @@ body{
     }
 
 
-.navbar-left div 
-    {
-        padding: 20px;
-    }
-
 .find-store
     {
         display: flex;
@@ -43,6 +44,7 @@ body{
         border: 1px solid black;
         border-radius: 30px;
         padding: 12px 20px 12px 20px;
+        white-space: nowrap;
     }
 
 .navbar-brand{
@@ -52,4 +54,41 @@ body{
     cursor: pointer;
 }
 
+
+.dropbtn {
+    background-color: #191d1c6a;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 40px;
+    text-transform: uppercase;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color:  #12171591;}
 
