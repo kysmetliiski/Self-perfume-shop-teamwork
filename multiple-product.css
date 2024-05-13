@@ -15,6 +15,17 @@
         padding-bottom: 82px;
       }
       
+      .row
+      {
+          text-transform: capitalize;
+      }
+      .no{
+        border-bottom: none;
+      }
+      .aa{
+          white-space: nowrap;
+      }
+ 
       .row:after {
         display: table;
         clear: both;

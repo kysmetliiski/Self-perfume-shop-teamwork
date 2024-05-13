@@ -30,14 +30,16 @@
             </a>
         </div>
 
-        
+        <?php if(@$_SESSION['user']){?>
         <div class="dropdown">
             <button class="dropbtn">Профил</button>
             <div class="dropdown-content">
               <a href="index.php?controller=checkord">Поръчки</a>
               <a href="index.php?controller=breakk">Изход</a>
             </div>
-          </div>
+        </div>
+        <?php }
+        else{} ?>
          
     </div>
 
