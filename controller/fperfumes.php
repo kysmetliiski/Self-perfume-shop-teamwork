@@ -24,7 +24,7 @@ class fperfumes extends Controller
         $comm = $this->model->fetch("SELECT * FROM perfume_comments where id = ?", array( $id ) );
         $dataa = $this->model->fetchAll("SELECT * FROM perfume_comments where perfume_id =$id", array());
         $photos = $this->model->fetchAll("SELECT * FROM spview WHERE perfume_id = $id", array());
-        $this->view->render("perfumes.html", array( 
+        $this->view->render("fperfumes.html", array( 
             'product' => $product, 
             'comm' => $comm,
             'dataa' => $dataa,

@@ -20,7 +20,6 @@ class shoppingcart extends controller{
 
                 $string .= $p;
             }
-     print_r($_SESSION); 
 
       @       $user =$_SESSION['user']['id'];
 

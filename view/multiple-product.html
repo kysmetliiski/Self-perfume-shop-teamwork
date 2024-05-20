@@ -8,28 +8,16 @@
     <link rel="icon" type="image/x-icon" href="photos/perfume.png">
     <link rel="stylesheet" type="text/css" href="multiple-product.css?v=16">
 </head>
-<style>
-    .row
-        {
-            text-transform: capitalize;
-            white-space: nowrap;
-        }
-   
-</style>
 <body>
     <?php 
     include("navbar.html");
-
-
     ?>
     
  
         <div class="row">
-
            <?php 
            foreach($data as $item){
            ?>
-
            <div class="column" >
             <a href="index.php?controller=perfumes&id=<?= $item['id'] ?>">
               <img src="<?= $item['product_image'] ?>" alt="" class="imga">
